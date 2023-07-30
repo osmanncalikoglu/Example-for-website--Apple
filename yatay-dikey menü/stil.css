@@ -1,0 +1,60 @@
+div{
+    width: 100px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    display: block;
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(31, 140, 131);
+    line-height: 50px;
+    border: 2px solid #000;
+}
+#pic1{
+    background-image: url("images/home.svg");
+    background-repeat: no-repeat;
+    background-position: center ;
+ }
+ #pic2{
+     background-image: url("images/car.svg");
+     background-repeat: no-repeat;
+     background-position: center ;
+  }
+  #pic3{
+     background-image: url("images/bike.svg");
+     background-repeat: no-repeat;
+     background-position: center ;
+  }
+  #pic4{
+     background-image: url("images/truck.svg");
+     background-repeat: no-repeat;
+     background-position: center ;
+  }
+  #pic5{
+     background-image: url("images/contact.svg");
+     background-repeat: no-repeat;
+     background-position: center ;
+  }
+  a:hover{
+     background-color: blue;
+  }
+
+
+
+
+
+
+
+
+
+
+

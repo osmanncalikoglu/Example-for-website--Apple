@@ -1,0 +1,52 @@
+div{
+    width: 800px;
+    height: 50px;
+    margin: 0 auto;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    float: left;
+}
+a{
+    display: block;
+    width: 156px;
+    height: 46px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(31, 140, 131);
+    line-height: 50px;
+    border: 2px solid #000;
+}
+
+#pic1{
+   background-image: url("images/home.svg");
+   background-repeat: no-repeat;
+   background-position: center ;
+}
+#pic2{
+    background-image: url("images/car.svg");
+    background-repeat: no-repeat;
+    background-position: center ;
+ }
+ #pic3{
+    background-image: url("images/bike.svg");
+    background-repeat: no-repeat;
+    background-position: center ;
+ }
+ #pic4{
+    background-image: url("images/truck.svg");
+    background-repeat: no-repeat;
+    background-position: center ;
+ }
+ #pic5{
+    background-image: url("images/contact.svg");
+    background-repeat: no-repeat;
+    background-position: center ;
+ }
+ a:hover{
+    background-color: blue;
+ }
