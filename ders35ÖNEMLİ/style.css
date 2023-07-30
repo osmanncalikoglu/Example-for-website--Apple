@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress{
+    background-color: gainsboro;
+    width: 800px;
+    padding: 20px;
+}
+
+.progress .container{
+    background-color: lightgrey;
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+
+.progress .container .progress-item{
+    background-color: royalblue;
+    position: absolute;
+    width: 0;
+    height: 100%;
+}
+
+.progress .container .count{
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
