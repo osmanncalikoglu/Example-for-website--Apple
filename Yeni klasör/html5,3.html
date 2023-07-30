@@ -1,0 +1,178 @@
+<html>
+<head>
+    <title>html5 ile form işlemleri</title>
+<style type="text/css">
+#container{width: 980px; height: 650px; margin: 10px auto;border: 1px dashed #bd652b; padding: 20px 0 20px 40px;}
+body{background: #f6f6f6; font-family: tahoma; text-transform: capitalize;}
+ section{width: 450px; height: 220px; float: left; margin: 0 40px 60px 0;}
+ aside{width: 450px; height: 120px; float: left; margin: 0 40px 60px 0;}
+ footer{width: 980px;height: 100px; clear: both;}
+ .baslikutu{width: 450px;padding: 0 0 10px 0; margin: 0 0 15px 0; border-bottom: 2px solid #dd9d42;
+ font:bold 19px tahoma ;color: #104579}
+
+ section input , aside input {width: 300px; padding: 5px; border: 1 px dashed #a0a0a0; font-size: 14px;}
+ section input:hover{border: 1px dashed #bd652b; background: #f0ddbc; }
+input.radio, input.onay {width: 15px;}
+textarea{width: 930px; height: 65px; border: 1px solid #ddd ; padding: 5px; color: #4b4b4b; font-size: 14px;}
+
+footer input, button{width: 100px; padding: 10px 25px; margin: 0 30px 20px 0; font: 14px; color: #fff; background: #24588f;
+ cursor: pointer; border-radius: 3px; border: none;}
+
+ tr:hover{color: #bd652b;}
+ tr:hover .siyah{color: #000}
+ input:focus, textarea:focus{outline: none;}
+
+ #askerlik, #digerdil, #digerbeceri{width: 300px;padding: 5px; border: 1px dashed #a0a0a0; color: #104579;font-size: 15px;}
+
+</style>
+<script type="text/javascript">
+
+    
+function askerlikdurumu(deger)
+    {
+       if(document.getElementById(deger).value=="erkek")
+       {document.getElementById("askerlik").type="text";}
+       else
+       {document.getElementById("askerlik").type="hidden"}
+    }
+
+    function ackapat(deger)
+    {
+       if(document.getElementById(deger).type=="text")
+       {document.getElementById("deger").type="hidden";}
+       else
+       {document.getElementById("deger").type="text"}
+    }
+
+    function kapat()
+    {
+        document.getElementById("askerlik").value="";
+        document.getElementById("digerdil").value="";
+        document.getElementById("digerbeceri").value="";
+        document.getElementById("digerilgi").value="";
+        
+        document.getElementById("askerlik").type="hidden";
+        document.getElementById("digerdil").type="hidden";
+        document.getElementById("digerbeceri").type="hidden";
+        document.getElementById("digerilgi").type="hidden";
+    
+    }
+</script>
+</head>
+
+<body>
+    <form action="" method="get">
+    <div id="container">
+<section>
+    <div class="baslikutu">kişisel bilgiler</div>
+    <table width="450" border="0" height="220">
+        <tr>
+            <td width="145">Ad</td>
+            <td width="5">:</td>
+            <td width="300"><input maxlength="20" type="text" placeholder="adınızı giriniz" required></td>
+        </tr>
+        <tr>
+            <td>soyad</td>
+            <td>:</td>
+            <td><input type="text" placeholder="soyadınızı giriniz" required></td>
+        </tr>
+        <tr>
+            <td>doğum tarihi</td>
+            <td>:</td>
+            <td><input type="date" required></td>
+        </tr>
+        <tr>
+            <td>telefon</td>
+            <td>:</td>
+            <td><input type="text" pattern="[\(]\d{3}[\)][\s]d{3}[\s]s{2}[\s]d{2}" placeholder="(xxx) xxx xx xx" required></td>
+        </tr>
+        <tr>
+            <td>e-mail adresi</td>
+            <td>:</td>
+            <td><input type="email" placeholder="e-mail adresinizi giriniz" required></td>
+        </tr>
+        <tr>
+            <td>cinsiyet</td>
+            <td>:</td>
+            <td class="siyah">
+            <input id="erkek" value="erkek" type="radio" name="cinsiyet" class="radio" required onclick="askerlikdurumu(this.id)"> erkek
+             <input id="kadin" value="kadın" type="radio" name="cinsiyet" class="radio" required onclick="askerlikdurumu(this.id)"> kadın
+            <input id="askerlik" value="" type="hidden" name="askerlik" placeholder="Askerlik durumunuzu giriniz.">
+            </td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <div class="baslikutu">eğitim durumu</div>
+    <table width="450" border="0" height="220">
+        <tr>
+            <td width="145">ilkokul</td>
+            <td width="5">:</td>
+            <td width="300"><input type="text" placeholder="ilokulunuzu giriniz" required></td>
+        </tr>
+        <tr>
+            <td>ortaokul</td>
+            <td>:</td>
+            <td><input type="text" placeholder="ortaokulunuzu giriniz" required></td>
+        </tr>
+        <tr>
+            <td>lise</td>
+            <td>:</td>
+            <td><input type="text" placeholder="lisenizi giriniz" required></td>
+        </tr>
+        <tr>
+            <td>üniversite</td>
+            <td>:</td>
+            <td><input type="text" placeholder="üniversitenizi giriniz" required></td>
+        </tr>
+        <tr>
+            <td>yüksek lisans</td>
+            <td>:</td>
+            <td><input type="text" placeholder="yüksek lisan eğitiminizi giriniz" required></td>
+        </tr>
+        <tr>
+            <td>yabancı dil</td>
+            <td>:</td>
+            <td class="siyah">
+            <input type="checkbox" class="onay"> almanca
+            <input type="checkbox" class="onay"> ingilizce
+            <input type="checkbox" class="onay"> arapça 
+            <input type="checkbox" class="onay" onclick="ackapat('digerdil')"> diğer
+            <input id="digerdil" type="hidden" name="digerdil" placeholder="Diğer bildiğiniz dilleri giriniz">
+       </td>
+        </tr>
+    </table> 
+</section>
+
+<aside>
+    <div class="baslikutu">İlgi alanları</div>
+    <input type="checkbox" class="onay"> sinema <br>
+    <input type="checkbox" class="onay"> tiyatro <br>
+    <input type="checkbox" class="onay"> spor <br>
+    <input type="checkbox" class="onay"> kitap <br>
+    <input type="checkbox" class="onay" onclick="ackapat('digerilgi')"> diğer
+    <input id="digerilgi" type="hidden" name="digerilgi" placeholder="Diğer ilgi alanlarınızı giriniz">
+</aside>
+
+<aside>
+    <div class="baslikutu">beceriler</div>
+    <input type="checkbox" name="" class="onay"> HTML <br>
+    <input type="checkbox" name="" class="onay"> CSS <br>
+    <input type="checkbox" name="" class="onay"> PHP <br>
+    <input type="checkbox" name="" class="onay"> ASP.NET <br>
+    <input type="checkbox" name="" class="onay" onclick="ackapat('digerbeceri')"> diğer
+    <input id="digerbeceri" type="hidden" name="digerbeceri" placeholder="Diğer becerinizi giriniz">
+</aside>
+
+<footer>
+    <div class="baslikutu">düşünceleriniz</div>
+    <textarea required></textarea><br><br>
+    <button>GÖNDER</button>
+    <input type="reset" value="SIFIRLA" onclick="kapat()">
+</footer>
+
+    </div>
+</form>
+</body>
+</html>

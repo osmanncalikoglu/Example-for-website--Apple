@@ -1,0 +1,96 @@
+body{
+    background: aqua;
+    font:tahoma;
+    text-transform: capitalize;
+}
+
+#container{
+    width: 980px;
+    height: 650px;
+    margin: 10px auto;
+    padding: 20px 0 20px 40px;
+    border: 1px solid #f00;
+}
+
+section{
+    width: 450px;
+    height: 220px;
+    float: left;
+    margin: 0 40px 60px 0;
+}
+
+aside{
+    width: 450px;
+    height: 120px;
+    float: left;
+    margin: 0 40px 60px 0;
+}
+
+footer{
+    width: 980px;
+    height: 100px;
+    clear: both;
+}
+
+.baslikkutu{
+    width: 450px;
+    padding: 0 0 10px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #c66e10;
+    font: bold 19px "Helvetica Neue";
+    color: #c66e10;
+}
+
+section input, aside input{
+    width: 300px;
+    padding: 5px;
+    border: 1px dashed #a0a0a0;
+    font-size: 14px;
+    
+}
+section input{
+    animation: background 3s linear ;
+}
+
+section input:hover{
+    border: 1px dashed #c66e10;
+    background: rgb(215, 212, 228);
+}
+
+input.radio, input.onay{
+    width: 15px;
+}
+
+textarea{
+    width: 930px;
+    height: 65px;
+    border: 1px solid #ddd;
+}
+
+footer input, button{
+    width: 100px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin: 0 30px 20px 0;
+    font: 14px;
+    color:#fff;
+    background: rgb(36, 14, 159);
+    cursor: pointer;
+    border: none;
+}
+
+tr:hover{
+    color: #c66e10;
+}
+
+tr:hover .siyah{
+    color: #000;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+
+
+
