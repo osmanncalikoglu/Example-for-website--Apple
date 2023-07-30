@@ -1,0 +1,51 @@
+.container{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+span{
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: orange;
+    border-radius: 13px;
+    position: relative;
+    transition: .5s;
+}
+
+span::before, span::after{
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: orange;
+    position: absolute;
+    border-radius: 13px;
+    transition: .5s;
+}
+
+span::before{
+    bottom: 20px;
+}
+
+span::after{
+    top: 20px;
+}
+
+.open span{
+    background-color: transparent;
+}
+
+.open span::before{
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+.open span::after{
+    transform: rotate(45deg);
+    top: 0;
+}
