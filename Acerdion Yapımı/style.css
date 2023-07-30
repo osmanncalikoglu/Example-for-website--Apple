@@ -1,0 +1,45 @@
+body{
+    background-color: #111;
+    font-family: helvetica;
+}
+
+.section1{
+    background-color: #fdd835;
+    padding: 15px;
+    cursor: pointer;
+}
+.section1::before{
+    content: "+";
+    position: absolute;
+    right: 20px;
+
+}
+
+.section1:hover{
+    background-color:#f9a825 ;
+}
+
+.panel{
+    background-color: #d8dfe1;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+p{
+    margin: 0;
+    background-color: #d8dfe1;
+    padding: 15px;
+}
+
+.active{
+    background-color: #f9a825;
+
+}
+
+.section1.active::before{
+    content: "-";
+    position: absolute;
+    right: 20px;
+}
+
