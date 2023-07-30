@@ -1,0 +1,41 @@
+body{
+    background-color: #111;
+    font-family: verdana;
+}
+
+.tab{
+    display: flex;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    
+}
+
+.tab button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: inherit;
+    padding: 16px 20px;
+    transition: .5s;
+}
+
+.tab button:hover{
+    background-color: #ddd;
+}
+
+.tab-item{
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 12px;
+    display: none;
+    animation: fade 1.5s;
+}
+
+.active{
+    background-color: #ccc;
+}
+@keyframes fade {
+    from {opacity:0}
+    to {opacity: 1;}
+}
