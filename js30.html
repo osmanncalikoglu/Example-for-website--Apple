@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>js 30</title>
+<script type="text/javascript">
+    function odaklan(x)
+    {
+        document.getElementById(x).style.backgroundColor="yellow";
+        document.getElementById(x).style.color="red";
+    }
+    function terket(x)
+    {
+        document.getElementById(x).style.backgroundColor="white";
+        document.getElementById(x).style.color="black";
+    }
+</script>
+</head>
+
+<body>
+    <form action="" method="get">
+        <textarea id="bolge" name="" cols="60" rows="10" onfocus="odaklan(this.id)" onblur="terket(this.id)"></textarea> <br/><br/>
+        <input id="alan" onfocus="odaklan(this.id)" onblur="terket(this.id)" type="text" />
+      
+    </form>
+   
+</body>
+</html>
