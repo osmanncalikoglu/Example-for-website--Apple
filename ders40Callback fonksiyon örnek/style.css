@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+main{
+    display: flex;
+    height: 100%;
+    background-color: orange;
+}
+
+div{
+    width: 5%;
+    background-color: red;
+    transition: 1s;
+    border-right: 1px solid black;
+}
+
+.item{
+    width: 25%;
+}
